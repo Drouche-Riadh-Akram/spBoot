@@ -4,6 +4,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
+//@Service("prioImpl") and use prioImpl on controller cnstructor with @Qualifier
+//@Primary to make it the default implementation
 public class InMemoryStudentService implements StudentService{
     private final InMemoryStudentDao dao;
 

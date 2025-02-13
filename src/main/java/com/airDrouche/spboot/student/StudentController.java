@@ -1,6 +1,7 @@
 package com.airDrouche.spboot.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,7 +12,7 @@ public class StudentController {
     //    @Autowired field injection but less suitable
     private final StudentService studentService;
     @Autowired //constructeur injection way more suitable : no need to specify @autowired in newer sp versions
-    public StudentController(StudentService studentService) {
+    public StudentController(@Qualifier("DBStudentService") StudentService studentService) {
         this.studentService = studentService;
     }
 
