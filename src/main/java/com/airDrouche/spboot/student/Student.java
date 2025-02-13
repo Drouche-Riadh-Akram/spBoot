@@ -3,7 +3,7 @@ package com.airDrouche.spboot.student;
 import java.time.LocalDate;
 
 public class Student {
-
+//    firstName lastName dateOfBirth email age
     private String firstName;
     private String lastName;
     private LocalDate dateOfBirth;
